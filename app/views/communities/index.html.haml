@@ -1,0 +1,14 @@
+%h1 Community Listing
+
+%table.table
+  %thead
+    %tr
+      %th Name
+  %tbody
+    - @communities.find_each do |community|
+      %tr
+        %td= community.name
+
+= link_to new_community_path, class: "btn btn-primary" do
+  = fa_icon "plus"
+  Add Community
