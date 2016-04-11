@@ -51,6 +51,7 @@ end
 
 gem 'simple_form'
 gem 'bootstrap-sass'
+gem 'bh', '~> 1.3'
 gem 'devise'
 gem 'haml'
 gem 'haml-rails'
