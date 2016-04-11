@@ -12,6 +12,9 @@ class CommunitiesController < ApplicationController
     @community = Community.new
   end
 
+  def edit
+  end
+
   def create
     @community = Community.new(community_params)
     if @community.save
