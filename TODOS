@@ -1,0 +1,7 @@
+You created a rails app using econya_rails_template .
+
+Now, you should
+  - setup your secrets
+  - fill in details in config/initializers/devise.rb
+  - setup actionmailer default path in dev environment
+  - remove this file
