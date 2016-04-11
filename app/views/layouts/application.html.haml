@@ -21,11 +21,7 @@
             %ul.nav.navbar-nav
               %li{class: ('active' if in_controller? 'communities')}
                 %a(href="#{communities_path}") Communities
-      - [:success, :info, :warning, :danger].each do |context|
-        - [*flash[context]].each do |msg|
-          = alert_box msg, context: :context
-      - flash.each do |context, msg|
-        = alert_box msg, context: :context
+      = render 'shared/flashs'
       .row
         .col-md-12
           .well

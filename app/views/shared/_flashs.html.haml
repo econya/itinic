@@ -1,0 +1,6 @@
+- [:success, :info, :warning, :danger].each do |context|
+  - [*flash[context]].each do |msg|
+    = alert_box msg, context: :context
+- flash.each do |context, msg|
+  = alert_box msg, context: :context
+
