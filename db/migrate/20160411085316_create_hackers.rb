@@ -5,7 +5,7 @@ class CreateHackers < ActiveRecord::Migration
       t.string :last_name
       t.string :alias
       t.string :slug
-      t.user :references
+      t.references :user, index: true, foreign_key: true
 
       t.timestamps null: false
     end
