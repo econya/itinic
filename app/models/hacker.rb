@@ -3,8 +3,13 @@ class Hacker < ActiveRecord::Base
   friendly_id :slug_candidates, use: :slugged
 
   belongs_to :user
-  has_many :community_involvements, inverse_of: :hacker, dependent: :restrict_with_exception
-  has_many :communities, through: :community_involvements, inverse_of: :hackers
+
+  has_many :community_involvements, inverse_of: :hacker,
+    dependent: :restrict_with_exception
+  has_many :communities, through: :community_involvements,
+    inverse_of: :hackers
+
+  has_many :experiences, inverse_of: :hacker
 
   validates :first_name, presence: true, if: Proc.new {|h| h.alias.blank? }
 

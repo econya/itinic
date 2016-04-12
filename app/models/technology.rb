@@ -2,6 +2,8 @@ class Technology < ActiveRecord::Base
   extend FriendlyId
   friendly_id :name, use: :slugged
 
+  has_many :experiences, inverse_of: :technology
+
   validates :name, presence: true, uniqueness: {case_sensitive: false}
 
   enum kind: {
