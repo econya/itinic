@@ -3,9 +3,9 @@
     .col-sm-4
       = f.association :technology, collection: Technology.all, prompt: 'Choose an existing technology'
     .col-sm-4
-      = f.input :assessment, collection: Experience.assessments.symbolize_keys.keys.map{|a| [a.capitalize, a]}.to_h
+      = f.input :assessment, collection: enum_map(Experience.assessments)
     .col-sm-2
-      = f.input :level, collection: Experience.levels.symbolize_keys.keys.map{|a| [a.capitalize, a]}.to_h
+      = f.input :level, collection: enum_map(Experience.levels)
     .col-sm-2
       = link_to_remove_association f, class: 'btn btn-warning' do
         = fa_icon "remove"
