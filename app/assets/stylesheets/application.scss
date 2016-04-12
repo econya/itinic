@@ -32,6 +32,17 @@ fieldset {
   margin-bottom: 10px;
 }
 
+h1 {
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+fieldset label.legend {
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
 /* On small screens, set height to 'auto' for the grid */
 @media screen and (max-width: 767px) {
   .row.content {height: auto;} 

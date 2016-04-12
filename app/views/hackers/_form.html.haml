@@ -2,7 +2,7 @@
   = f.error_notification
 
   %fieldset
-    %label Person
+    %label.legend Person
     .form-inputs
       = f.input :first_name
       = f.input :last_name
@@ -11,7 +11,7 @@
   %hr
 
   %fieldset
-    %label Community involvements
+    %label.legend Community involvements
     #community_involvements
       = f.simple_fields_for :community_involvements do |c|
         = render 'community_involvement_fields', f: c
@@ -25,7 +25,7 @@
   %hr
 
   %fieldset
-    %label Experiences
+    %label.legend Experiences
     #experiences
       = f.simple_fields_for :experiences do |e|
         = render 'experience_fields', f: e
