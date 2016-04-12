@@ -6,4 +6,12 @@ module ViewActionHelper
       concat("Add #{resource}")
     end
   end
+
+  def edit_button resource
+    link_to self.send("edit_#{resource.class.name.downcase}_path".to_sym, resource), class: "btn btn-primary" do
+      concat(fa_icon "wrench")
+      concat(" ")
+      concat("Edit")
+    end
+  end
 end

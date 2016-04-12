@@ -13,4 +13,4 @@
     = render partial: 'tr_community_involvement', collection: @community.community_involvements || content_tag(:tr, content_tag(:td, 'No hackers registered'))
 
 
-= link_to 'Edit', edit_community_path(@community)
+= edit_button @community
