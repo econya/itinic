@@ -1,3 +1,15 @@
 %h1
   Hacker
   = @hacker.name
+
+%h2 Community Involvements
+
+%table.table
+  %thead
+    %tr
+      %td Community
+      %td Role
+  %tbody
+    = render partial: 'tr_community_involvement', collection: @hacker.community_involvements || content_tag(:tr, content_tag(:td, 'No involvement registered'))
+
+

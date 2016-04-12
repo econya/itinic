@@ -23,6 +23,15 @@
   height: 100%;
 }
 
+/* Custom fieldset with bootstrap, simple_form */
+fieldset {
+  border: 1px solid #bbb;
+  border-radius: 4px;
+  padding: 7px;
+  background: #eee;
+  margin-bottom: 10px;
+}
+
 /* On small screens, set height to 'auto' for the grid */
 @media screen and (max-width: 767px) {
   .row.content {height: auto;} 

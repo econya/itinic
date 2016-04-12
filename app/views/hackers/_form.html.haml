@@ -1,10 +1,17 @@
 = simple_form_for @hacker, html: { class: 'form-horizontal' }, wrapper: :horizontal_form do |f|
   = f.error_notification
 
-  .form-inputs
-    = f.input :first_name
-    = f.input :last_name
-    = f.input :alias
+  %fieldset
+    %label Person
+    .form-inputs
+      = f.input :first_name
+      = f.input :last_name
+      = f.input :alias
+
+  %fieldset
+    %label Community involvements
+    = f.simple_fields_for :community_involvements do |c|
+      = render 'community_involvement_fields', f: c
 
   %hr
 
