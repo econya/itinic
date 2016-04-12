@@ -13,6 +13,8 @@ that they are open and can be connected to, to make IT staff business of
 Intentional Communities easier (in the short run).
 
 Note that I am freakily busy and itinic is really just a hack.
+It was created in my 'free' time (dont tell my wife or my friends) and I cannot
+guarantee any maintenance effort.
 
 ## Installation
 
