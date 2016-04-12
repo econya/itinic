@@ -16,6 +16,11 @@ Note that I am freakily busy and itinic is really just a hack.
 It was created in my 'free' time (dont tell my wife or my friends) and I cannot
 guarantee any maintenance effort.
 
+## Usage
+
+Note that everybody can register and thus see other peoples names.
+
+
 ## Installation
 
 itinic is build with ruby on rails
