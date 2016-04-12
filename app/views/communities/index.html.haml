@@ -5,10 +5,6 @@
     %tr
       %th Name
   %tbody
-    - @communities.find_each do |community|
-      %tr
-        %td= community.name
+    = render partial: 'tr_community', collection: @communities || content_tag(:tr, content_tag(:td, 'No communities'))
 
-= link_to new_community_path, class: "btn btn-primary" do
-  = fa_icon "plus"
-  Add Community
+= add_button "Community"
