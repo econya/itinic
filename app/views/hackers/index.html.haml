@@ -1,8 +1,8 @@
-%h1 Hacker Listing
+%h1 Listing Hackers
 
 %table.table
   %thead
     %tr
       %th Name
   %tbody
-    = render partial: 'tr_hacker', collection: @hacker || content_tag(:tr, content_tag(:td, 'No Hackers'))
+    = render partial: 'tr_hacker', collection: @hackers || content_tag(:tr, content_tag(:td, 'No Hackers'))
