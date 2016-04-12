@@ -1,0 +1,13 @@
+%h1 Listing Technologies
+
+%table.table
+  %thead
+    %tr
+      %th Name
+      %th Kind
+  %tbody
+    = render partial: 'tr_technology', collection: @technologies || content_tag(:tr, content_tag(:td, 'No technologies'))
+
+= link_to new_technology_path, class: "btn btn-primary" do
+  = fa_icon "plus"
+  Add Technology

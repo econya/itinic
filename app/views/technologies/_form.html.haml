@@ -1,0 +1,10 @@
+= simple_form_for @technology, html: { class: 'form-horizontal' }, wrapper: :horizontal_form do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :name
+
+  %br
+
+  .form-actions
+    = f.button :submit
