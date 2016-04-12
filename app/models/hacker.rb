@@ -2,7 +2,7 @@ class Hacker < ActiveRecord::Base
   extend FriendlyId
   friendly_id :slug_candidates, use: :slugged
 
-  has_one :user
+  belongs_to :user
 
   validates :first_name, presence: true, if: Proc.new {|h| h.alias.blank? }
 
