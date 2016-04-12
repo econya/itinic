@@ -1,0 +1,13 @@
+#navbar.navbar-collapse.collapse
+  %ul.nav.navbar-nav
+    %li{class: ('active' if in_controller? 'communities')}
+      %a(href="#{communities_path}") Communities
+  %ul.nav.navbar-nav
+    %li{class: ('active' if in_controller? 'technologies')}
+      %a(href="#{technologies_path}") Technologies
+  %ul.nav.navbar-nav
+    %li{class: ('active' if in_controller? 'hackers')}
+      %a(href="#{hackers_path}") Hackers
+  %ul.nav.navbar-nav
+    %li{class: ('active' if in_controller? 'pages')}
+      %a(href="#{about_path}") About
