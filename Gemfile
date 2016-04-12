@@ -58,3 +58,4 @@ gem 'haml-rails', '~> 0.9'
 gem 'friendly_id', '~> 5.1'
 gem 'font-awesome-rails', '~> 4.5'
 # Join-model-ajax-add-magic
+gem 'cocoon', '~> 1.2'
