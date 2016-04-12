@@ -1,0 +1,8 @@
+%h1 Hacker Listing
+
+%table.table
+  %thead
+    %tr
+      %th Name
+  %tbody
+    = render partial: 'tr_hacker', collection: @hacker || content_tag(:tr, content_tag(:td, 'No Hackers'))
