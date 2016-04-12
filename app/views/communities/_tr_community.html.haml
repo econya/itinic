@@ -1,2 +1,6 @@
 %tr
   %td= tr_community.name
+  %td
+    - tr_community.community_involvements.each do |i|
+      = link_to i.hacker.name, i.hacker
+      (#{i.kind})

@@ -4,6 +4,7 @@
   %thead
     %tr
       %th Name
+      %th People
   %tbody
     = render partial: 'tr_community', collection: @communities || content_tag(:tr, content_tag(:td, 'No communities'))
 
