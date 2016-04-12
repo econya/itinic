@@ -21,4 +21,6 @@
           %li
             = link_to 'Profile', edit_hacker_path(0)
           %li
+            = link_to 'Change Password', edit_user_registration_path
+          %li
             = link_to 'Logout', destroy_user_session_path, :method=>'delete'
