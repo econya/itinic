@@ -34,16 +34,16 @@ itinic is build with ruby on rails
 
   * Deployment instructions (for dokku)
     * Initially
-      - git remote add dokku dokku@yourhost:itinic
-      - dokku apps:create itinic
-      - dokku postgres:create db.itinic
-      - dokku postgres:link db.itinic itinic
-      - git push dokku
-      - dokku run itinic rake db:migrate db:seed
+      - `dokku apps:create itinic`
+      - `dokku postgres:create db.itinic`
+      - `dokku postgres:link db.itinic itinic`
+      - `git remote add dokku dokku@yourhost:itinic`
+      - `git push dokku`
+      - `dokku run itinic rake db:migrate db:seed`
     * On updates
-      - git push dokku
+      - `git push dokku` (yay, isnt dokku cool?)
     * On migrations
-      - dokku run itinic rake db:migrate
+      - `dokku run itinic rake db:migrate`
 
   * ...
 
