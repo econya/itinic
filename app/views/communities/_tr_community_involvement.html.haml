@@ -3,4 +3,7 @@
     = link_to tr_community_involvement.hacker_name, tr_community_involvement.hacker
   %td
     = tr_community_involvement.kind
-
+  %td
+    - tr_community_involvement.hacker.experiences.each do |e|
+      = e.level
+      = link_to e.technology_name, e.technology
