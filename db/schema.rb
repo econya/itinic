@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160412054336) do
+ActiveRecord::Schema.define(version: 20160412104350) do
 
   create_table "communities", force: :cascade do |t|
     t.string   "name"
@@ -19,6 +19,17 @@ ActiveRecord::Schema.define(version: 20160412054336) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
+
+  create_table "community_involvements", force: :cascade do |t|
+    t.integer  "hacker_id",                 null: false
+    t.integer  "community_id",              null: false
+    t.integer  "kind",         default: 20
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
+  end
+
+  add_index "community_involvements", ["community_id"], name: "index_community_involvements_on_community_id"
+  add_index "community_involvements", ["hacker_id"], name: "index_community_involvements_on_hacker_id"
 
   create_table "hackers", force: :cascade do |t|
     t.string   "first_name"
