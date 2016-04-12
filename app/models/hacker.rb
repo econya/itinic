@@ -9,10 +9,10 @@ class Hacker < ActiveRecord::Base
   before_save :strip_text_fields
 
   def name
-    if first_name.present?
-      "#{first_name} #{last_name}"
-    else
+    if self.alias.present?
       self.alias
+    else
+      "#{first_name} #{last_name}"
     end
   end
 
