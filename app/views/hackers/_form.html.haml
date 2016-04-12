@@ -10,8 +10,15 @@
 
   %fieldset
     %label Community involvements
-    = f.simple_fields_for :community_involvements do |c|
-      = render 'community_involvement_fields', f: c
+    #community_involvements
+      = f.simple_fields_for :community_involvements do |c|
+        = render 'community_involvement_fields', f: c
+      .links
+        .row
+          .col-sm-2.col-sm-offset-10
+            = link_to_add_association f, :community_involvements, class: 'btn btn-primary' do
+              = fa_icon "plus"
+              add involvement
 
   %hr
 

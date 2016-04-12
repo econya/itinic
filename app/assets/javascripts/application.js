@@ -16,3 +16,9 @@
 //= require bootstrap-sprockets
 //= require cocoon
 //= require_tree .
+
+$(document).ready(function() {
+  $("#community_involvements a.add_fields").
+    data("association-insertion-traversal", 'closest').
+    data("association-insertion-node", '.row');
+});
