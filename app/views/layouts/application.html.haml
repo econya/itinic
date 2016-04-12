@@ -27,7 +27,7 @@
             %ul.nav.navbar-nav
               %li{class: ('active' if in_controller? 'pages')}
                 %a(href="#{about_path}") About
-      = render 'shared/flashs'
+      = render 'layouts/flashs'
       .row
         .col-md-12
           .well
