@@ -32,7 +32,18 @@ itinic is build with ruby on rails
 
   * Services (job queues, cache servers, search engines, etc.)
 
-  * Deployment instructions
+  * Deployment instructions (for dokku)
+    * Initially
+      - git remote add dokku dokku@yourhost:itinic
+      - dokku apps:create itinic
+      - dokku postgres:create db.itinic
+      - dokku postgres:link db.itinic itinic
+      - git push dokku
+      - dokku run itinic rake db:migrate db:seed
+    * On updates
+      - git push dokku
+    * On migrations
+      - dokku run itinic rake db:migrate
 
   * ...
 
