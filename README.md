@@ -28,14 +28,13 @@ itinic is build with ruby on rails
   * System dependencies
 
   * Configuration
+    - mailer configuration
 
-  * Database creation
-
-  * Database initialization
+  * Database setup
+    - via `rake db:setup` (includes `rake db:seed` for initial technology tree).
 
   * How to run the test suite
-
-  * Services (job queues, cache servers, search engines, etc.)
+    - `rake`
 
   * Deployment instructions (for dokku)
     * Initially
