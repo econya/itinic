@@ -11,3 +11,14 @@
   %ul.nav.navbar-nav
     %li{class: ('active' if in_controller? 'pages')}
       %a(href="#{about_path}") About
+  - if current_user
+    %ul.nav.navbar-nav.navbar-right
+      %li.dropdown
+        %a.dropdown-toggle(href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false")
+          Account
+          %span.caret
+        %ul.dropdown-menu
+          %li
+            = link_to 'Profile', edit_hacker_path(0)
+          %li
+            = link_to 'Logout', destroy_user_session_path, :method=>'delete'
