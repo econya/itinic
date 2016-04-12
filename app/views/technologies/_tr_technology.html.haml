@@ -2,3 +2,11 @@
   %td
     = link_to tr_technology.name, tr_technology
   %td= tr_technology.kind
+  %td
+    - tr_technology.experiences.each do |e|
+      = link_to e.hacker_name, e.hacker
+      (
+      = e.level
+      \/
+      = e.assessment
+      )
