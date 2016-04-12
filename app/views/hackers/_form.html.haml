@@ -8,6 +8,8 @@
       = f.input :last_name
       = f.input :alias
 
+  %hr
+
   %fieldset
     %label Community involvements
     #community_involvements
@@ -21,6 +23,18 @@
               add involvement
 
   %hr
+
+  %fieldset
+    %label Experiences
+    #experiences
+      = f.simple_fields_for :experiences do |e|
+        = render 'experience_fields', f: e
+      .links
+        .row
+          .col-sm-2.col-sm-offset-10
+            = link_to_add_association f, :experiences, class: 'btn btn-primary' do
+              = fa_icon "plus"
+              add experience
 
   .form-actions
     = f.button :submit

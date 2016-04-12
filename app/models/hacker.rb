@@ -16,6 +16,7 @@ class Hacker < ActiveRecord::Base
   before_save :strip_text_fields
 
   accepts_nested_attributes_for :community_involvements, allow_destroy: true, reject_if: :all_blank
+  accepts_nested_attributes_for :experiences, allow_destroy: true, reject_if: :all_blank
 
   def name
     if self.alias.present?

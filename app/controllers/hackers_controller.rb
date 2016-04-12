@@ -14,7 +14,8 @@ class HackersController < ApplicationController
   #end
 
   def edit
-    @hacker.community_involvements.build
+    @hacker.community_involvements.build(kind: nil)
+    @hacker.experiences.build
   end
 
   def create
@@ -55,6 +56,7 @@ class HackersController < ApplicationController
       :last_name,
       :alias,
       :_destroy,
-      community_involvements_attributes: [:id, :kind, :community_id, :_destroy])
+      community_involvements_attributes: [:id, :kind, :community_id, :_destroy],
+      experiences_attributes: [:id, :technology_id, :assessment, :level, :_destroy])
   end
 end
