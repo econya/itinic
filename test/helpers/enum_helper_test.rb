@@ -8,4 +8,10 @@ class EnumHelperTest <  ActionView::TestCase
                   "Two and a half" => :two_and_a_half},
                  map)
   end
+
+  test 'sym_to_s' do
+    l = %w{a_b_c HaIr luLLaby}
+    assert_equal(["A b c", "Hair", "Lullaby"],
+                 l.map{|s| sym_to_s s})
+  end
 end
