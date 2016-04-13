@@ -1,7 +1,12 @@
 .nested-fields
   .row
     .col-sm-4
-      = f.association :technology, collection: Technology.all, prompt: 'Choose an existing technology'
+      = f.association :technology,
+        as: :grouped_select,
+        collection: @technology_groups,
+        group_method: :last,
+        value_method: :id,
+        prompt: 'Choose an existing technology'
     .col-sm-4
       = f.input :assessment, collection: enum_map(Experience.assessments)
     .col-sm-2

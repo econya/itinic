@@ -1,6 +1,7 @@
 class HackersController < ApplicationController
   before_action :set_hacker, only: [:show]
   before_action :own_hacker, only: [:edit, :update]
+  before_action :set_technology_groups, only: [:new, :create, :edit, :update]
 
   def index
     @hackers = Hacker.all
@@ -40,6 +41,10 @@ class HackersController < ApplicationController
   #end
 
   private
+
+  def set_technology_groups
+    @technology_groups = Technology.all.order(:name).group_by(&:kind).sort
+  end
 
   def set_hacker
     @hacker = Hacker.friendly.find(params[:id])
