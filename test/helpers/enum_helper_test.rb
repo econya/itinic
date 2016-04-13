@@ -13,5 +13,7 @@ class EnumHelperTest <  ActionView::TestCase
     l = %w{a_b_c HaIr luLLaby}
     assert_equal(["A b c", "Hair", "Lullaby"],
                  l.map{|s| sym_to_s s})
+    assert_nil sym_to_s nil
+    assert_equal "", sym_to_s("")
   end
 end

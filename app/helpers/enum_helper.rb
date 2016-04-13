@@ -1,5 +1,6 @@
 module EnumHelper
   def sym_to_s string
+    return nil if string.nil?
     string.capitalize.to_s.gsub(/_/, ' ')
   end
 
