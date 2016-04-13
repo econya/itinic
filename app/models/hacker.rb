@@ -13,6 +13,13 @@ class Hacker < ActiveRecord::Base
 
   validates :first_name, presence: true, if: Proc.new {|h| h.alias.blank? }
 
+  enum morale: {
+    proprietary_if_possible:    10,
+    does_not_matter:            20,
+    open_source_where_possible: 30,
+    strictly_open_source:       40
+  }
+
   before_save :strip_text_fields
 
   accepts_nested_attributes_for :community_involvements, allow_destroy: true, reject_if: :all_blank

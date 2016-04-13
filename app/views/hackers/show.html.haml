@@ -2,6 +2,14 @@
   Hacker
   = @hacker.name
 
+%h2 Personal
+
+%dl
+  %dt
+    Morale restrictions
+  %dd
+    = sym_to_s @hacker.morale || "None"
+
 %h2 Community Involvements
 
 %table.table

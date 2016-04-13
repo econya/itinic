@@ -11,6 +11,13 @@
   %hr
 
   %fieldset
+    %label.legend Personal
+    .form-inputs
+      = f.input :morale, collection: enum_map(Hacker.morales)
+
+  %hr
+
+  %fieldset
     %label.legend Community involvements
     #community_involvements
       = f.simple_fields_for :community_involvements do |c|
