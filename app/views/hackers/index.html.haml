@@ -7,4 +7,4 @@
       %th Where
       %th Experiences
   %tbody
-    = render partial: 'tr_hacker', collection: @hackers || content_tag(:tr, content_tag(:td, 'No Hackers'))
+    = render(partial: 'tr_hacker', collection: @hackers) || content_tag(:tr, content_tag(:td, 'No Hackers'))

@@ -10,6 +10,4 @@
       %td Level
       %td Assessment
   %tbody
-    = render partial: 'tr_experience', collection: @technology.experiences || content_tag(:tr, content_tag(:td, 'No experiences registered'))
-
-= link_to 'Edit', edit_technology_path(@technology)
+    = render(partial: 'tr_experience', collection: @technology.experiences) || content_tag(:tr, content_tag(:td, 'No experiences registered', colspan: 3))

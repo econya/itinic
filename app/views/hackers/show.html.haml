@@ -10,7 +10,7 @@
       %td Community
       %td Role
   %tbody
-    = render partial: 'tr_community_involvement', collection: @hacker.community_involvements || content_tag(:tr, content_tag(:td, 'No involvement registered'))
+    = render(partial: 'tr_community_involvement', collection: @hacker.community_involvements) || content_tag(:tr, content_tag(:td, 'No involvement registered'))
 
 %h2 Experiences
 
@@ -21,7 +21,7 @@
       %td Level
       %td Assessment
   %tbody
-    = render partial: 'tr_experience', collection: @hacker.experiences || content_tag(:tr, content_tag(:td, 'No experiences registered'))
+    = render(partial: 'tr_experience', collection: @hacker.experiences) || content_tag(:tr, content_tag(:td, 'No experiences registered'))
 
 - if @hacker == current_user.hacker
   = edit_button @hacker

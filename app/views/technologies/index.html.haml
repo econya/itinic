@@ -7,6 +7,6 @@
       %th Kind
       %th People (level/assessment)
   %tbody
-    = render partial: 'tr_technology', collection: @technologies || content_tag(:tr, content_tag(:td, 'No technologies'))
+    = render(partial: 'tr_technology', collection: @technologies) || content_tag(:tr, content_tag(:td, 'No technologies'), colspan: 3)
 
 = add_button "Technology"
