@@ -24,6 +24,8 @@ Note that everybody can register and thus see other peoples names.
 
 itinic is released at the terms of the GPL v3 (or any later), which can be found in the git repository (COPYING).  Copyright 2016 Felix Wolfsteller.
 
+The implementation and interface is clumsy, but patches are welcome.
+
 ## Installation
 
 itinic is build with ruby on rails
@@ -66,4 +68,6 @@ itinic is build with ruby on rails
 
   * ...
 
+## Contributing
 
+Feel free to open an issue at http://github.com/econya/itinic/issues .
