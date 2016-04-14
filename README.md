@@ -20,6 +20,9 @@ guarantee any maintenance effort.
 
 Note that everybody can register and thus see other peoples names.
 
+## Implementation
+
+itinic is released at the terms of the GPL v3 (or any later), which can be found in the git repository (COPYING).  Copyright 2016 Felix Wolfsteller.
 
 ## Installation
 
