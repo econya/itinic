@@ -3,6 +3,7 @@ class Technology < ActiveRecord::Base
   friendly_id :name, use: :slugged
 
   has_many :experiences, inverse_of: :technology
+  has_many :tool_uses, inverse_of: :technology
 
   validates :name, presence: true, uniqueness: {case_sensitive: false}
   validates :kind, presence: true
