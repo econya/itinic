@@ -18,9 +18,9 @@ en:
       unconfirmed: "You have to confirm your email address before continuing."
     mailer:
       confirmation_instructions:
-        subject: "Confirmation instructions"
+        subject: "Confirmation instructions for itinic account"
       reset_password_instructions:
-        subject: "Reset password instructions"
+        subject: "Reset password instructions for itinic account"
       unlock_instructions:
         subject: "Unlock instructions"
       password_change:
