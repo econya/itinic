@@ -1,6 +1,14 @@
 %tr
   %td
     = link_to tr_experience.hacker_name, tr_experience.hacker
-  %td= tr_experience.level
-  %td= tr_experience.assessment
+  %td
+    = render_stars tr_experience.level, Experience.levels
+    (
+    = tr_experience.level
+    )
+  %td
+    = render_stars tr_experience.assessment, Experience.assessments
+    (
+    = tr_experience.assessment
+    )
 

@@ -1,5 +1,7 @@
 %tr
   %td
     = link_to tr_experience.technology_name, tr_experience.technology
-  %td= tr_experience.level
-  %td= tr_experience.assessment
+  %td
+    = render_stars tr_experience.level, Experience.levels
+  %td
+    = render_stars tr_experience.assessment, Experience.assessments
