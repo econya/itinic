@@ -20,6 +20,11 @@
           = render 'layouts/navigation'
       = render 'layouts/flashs'
       .row
+        - if current_user && !current_user.hacker
+          .col-md-12
+            = alert_box context: :warning do
+              Please fill out
+              = link_to "your profile.", edit_hacker_path(0)
         .col-md-12
           .well
             = yield
