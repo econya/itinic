@@ -35,13 +35,13 @@ class CommunitiesController < ApplicationController
     end
   end
 
-  def destroy
-    if @community.destroy
-      redirect_to communities_url, notice: 'Community was successfully deleted'
-    else
-      redirect_to communities_url, notice: 'Community could not be deleted.'
-    end
-  end
+  #def destroy
+  #  if @community.destroy
+  #    redirect_to communities_url, notice: 'Community was successfully deleted'
+  #  else
+  #    redirect_to communities_url, notice: 'Community could not be deleted.'
+  #  end
+  #end
 
   private
 

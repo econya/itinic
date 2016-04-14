@@ -11,8 +11,7 @@ class HackersController < ApplicationController
   end
 
   # No new action!
-  #def new
-  #end
+  #def new ; end
 
   def edit
     @hacker.community_involvements.build(kind: nil)
@@ -37,8 +36,7 @@ class HackersController < ApplicationController
   end
 
   # no destroy action!
-  #def destroy
-  #end
+  #def destroy ; end
 
   private
 

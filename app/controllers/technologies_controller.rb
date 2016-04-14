@@ -12,8 +12,7 @@ class TechnologiesController < ApplicationController
     @technology = Technology.new
   end
 
-  def edit
-  end
+  #def edit ; end
 
   def create
     @technology = Technology.new(technology_params)
@@ -32,13 +31,13 @@ class TechnologiesController < ApplicationController
     end
   end
 
-  def destroy
-    if @technology.destroy
-      redirect_to technologies_url, notice: 'Technology was successfully deleted'
-    else
-      redirect_to technologies_url, notice: 'Technology could not be deleted.'
-    end
-  end
+  #def destroy
+  #  if @technology.destroy
+  #    redirect_to technologies_url, notice: 'Technology was successfully deleted'
+  #  else
+  #    redirect_to technologies_url, notice: 'Technology could not be deleted.'
+  #  end
+  #end
 
   private
 

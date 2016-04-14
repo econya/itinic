@@ -8,8 +8,8 @@ Rails.application.routes.draw do
   authenticate :user do
     root to: "hackers#index", as: :authenticated_root
 
-    resources :communities
-    resources :technologies
-    resources :hackers, not: [:new, :destroy]
+    resources :communities,  only: [:create, :edit, :index, :new, :show, :update]
+    resources :technologies, only: [:create, :edit, :index, :new, :show, :update]
+    resources :hackers,      only: [:create, :edit, :update, :show, :index]
   end
 end
