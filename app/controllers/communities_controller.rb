@@ -11,9 +11,11 @@ class CommunitiesController < ApplicationController
 
   def new
     @community = Community.new
+    @community.tool_uses.build
   end
 
   def edit
+    @community.tool_uses.build
   end
 
   def create
