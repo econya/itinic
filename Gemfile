@@ -60,3 +60,4 @@ gem 'friendly_id', '~> 5.1'
 gem 'font-awesome-rails', '~> 4.5'
 # Join-model-ajax-add-magic
 gem 'cocoon', '~> 1.2'
+gem 'rails_12factor'
