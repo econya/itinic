@@ -49,6 +49,7 @@ class TechnologiesController < ApplicationController
   def technology_params
     params.require(:technology).permit(
       :name,
+      :kind,
       :_destroy)
   end
 end

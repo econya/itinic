@@ -3,6 +3,7 @@
 
   .form-inputs
     = f.input :name
+    = f.input :kind, collection: enum_map(Technology.kinds)
 
   %br
 
