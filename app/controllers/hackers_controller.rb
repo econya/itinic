@@ -24,7 +24,7 @@ class HackersController < ApplicationController
     if @hacker.save
       redirect_to @hacker, notice: "Profile was successfully created."
     else
-      render :new
+      render :edit
     end
   end
 
