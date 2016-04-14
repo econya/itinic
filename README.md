@@ -28,7 +28,14 @@ itinic is build with ruby on rails
   * System dependencies
 
   * Configuration
-    - mailer configuration
+    - needed environment variables (mostly for email-sending and correct
+      devise mails)
+      - DEVISE_MAILER_SENDER (sender mail address)
+      - DOMAIN
+      - SMTP_SERVER
+      - MAILER_DOMAIN
+      - SMTP_USER
+      - SMTP_PWD
 
   * Database setup
     - via `rake db:setup` (includes `rake db:seed` for initial technology tree).
@@ -41,6 +48,11 @@ itinic is build with ruby on rails
       - `dokku apps:create itinic`
       - `dokku postgres:create db.itinic`
       - `dokku postgres:link db.itinic itinic`
+      - `dokku config:set itinic DEVISE_MAILER_SENDER="registered@it" \
+        DOMAIN="i...de" SMTP_SERVER="smtp..." \
+        MAILER_DOMAIN="it...de"\
+        SMTP_USER="myuser@..."\
+        SMTP_PWD="hardcorepass"`
       - `git remote add dokku dokku@yourhost:itinic`
       - `git push dokku`
       - `dokku run itinic rake db:migrate db:seed`
