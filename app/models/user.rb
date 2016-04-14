@@ -5,4 +5,6 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable,
          :confirmable
   has_one :hacker
+
+  delegate :name, to: :hacker, prefix: true, allow_nil: true
 end

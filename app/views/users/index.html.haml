@@ -1,0 +1,10 @@
+%h1 Listing Users
+
+%table.table
+  %thead
+    %tr
+      %th E-Mail
+      %th Name
+      %th last login
+  %tbody
+    = render partial: 'tr_user', collection: @users

@@ -11,5 +11,6 @@ Rails.application.routes.draw do
     resources :communities,  only: [:create, :edit, :index, :new, :show, :update]
     resources :technologies, only: [:create, :edit, :index, :new, :show, :update]
     resources :hackers,      only: [:create, :edit, :update, :show, :index]
+    resources :users,        only: [:index]
   end
 end

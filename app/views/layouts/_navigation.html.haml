@@ -11,6 +11,10 @@
   %ul.nav.navbar-nav
     %li{class: ('active' if in_controller? 'pages')}
       %a(href="#{about_path}") About
+  - if current_user && current_user.admin?
+    %ul.nav.navbar-nav
+      %li{class: ('active' if in_controller? 'users')}
+        %a(href="#{users_path}") Users
   - if current_user
     %ul.nav.navbar-nav.navbar-right
       %li.dropdown
