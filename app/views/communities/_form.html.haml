@@ -7,7 +7,11 @@
   %br
 
   %fieldset
-    %label.legend Tool Use
+    %label.legend
+      Tool Use
+      [
+      = link_to "add new technology", new_technology_path, target: '_blank'
+      ]
     #tool_uses
       = f.simple_fields_for :tool_uses do |e|
         = render 'tool_use_fields', f: e

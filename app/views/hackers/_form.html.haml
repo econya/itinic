@@ -4,21 +4,25 @@
   %fieldset
     %label.legend Person
     .form-inputs
-      = f.input :first_name
-      = f.input :last_name
-      = f.input :alias
+      = f.input :first_name, placeholder: 'Your first name', hint: 'Alternatively, use alias below'
+      = f.input :last_name, placeholder: 'Your first name', hint: 'Your last name'
+      = f.input :alias, placeholder: 'alias', hint: 'Will be shown in preference to full name, if defined.'
 
   %hr
 
   %fieldset
     %label.legend Personal
     .form-inputs
-      = f.input :morale, collection: enum_map(Hacker.morales)
+      = f.input :morale, collection: enum_map(Hacker.morales), hint: 'How much pain is it for you to use proprietary software?'
 
   %hr
 
   %fieldset
-    %label.legend Community involvements
+    %label.legend
+      Community involvements
+      [
+      = link_to "add a community", new_community_path, target: '_blank'
+      ]
     #community_involvements
       = f.simple_fields_for :community_involvements do |c|
         = render 'community_involvement_fields', f: c
@@ -32,7 +36,11 @@
   %hr
 
   %fieldset
-    %label.legend Experiences
+    %label.legend
+      Experiences
+      [
+      = link_to "add a technology", new_technology_path, target: '_blank'
+      ]
     #experiences
       = f.simple_fields_for :experiences do |e|
         = render 'experience_fields', f: e
