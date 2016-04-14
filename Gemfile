@@ -61,3 +61,6 @@ gem 'font-awesome-rails', '~> 4.5'
 # Join-model-ajax-add-magic
 gem 'cocoon', '~> 1.2'
 gem 'rails_12factor'
+
+# Markdown in haml goodness
+gem 'rdiscount'

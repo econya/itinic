@@ -145,6 +145,7 @@ GEM
       rake (>= 0.8.7)
       thor (>= 0.18.1, < 2.0)
     rake (11.1.2)
+    rdiscount (2.1.8)
     rdoc (4.2.2)
       json (~> 1.4)
     responders (2.1.2)
@@ -211,6 +212,7 @@ DEPENDENCIES
   pg
   rails (= 4.2.6)
   rails_12factor
+  rdiscount
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
   simple_form (~> 3.2)
