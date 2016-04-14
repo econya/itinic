@@ -1,5 +1,6 @@
 class CommunitiesController < ApplicationController
   before_action :set_community, only: [:show, :edit, :update, :destroy]
+  before_action :set_technology_groups, only: [:new, :create, :edit, :update]
 
   def index
     @communities = Community.all
@@ -42,6 +43,10 @@ class CommunitiesController < ApplicationController
 
   private
 
+  def set_technology_groups
+    @technology_groups = Technology.all.order(:name).group_by(&:kind).sort
+  end
+
   def set_community
     @community = Community.friendly.find(params[:id])
   end
@@ -49,6 +54,8 @@ class CommunitiesController < ApplicationController
   def community_params
     params.require(:community).permit(
       :name,
-      :_destroy)
+      :_destroy,
+      tool_uses_attributes: [:id, :technology_id, :assessment, :task]
+      )
   end
 end

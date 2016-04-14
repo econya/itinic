@@ -1,0 +1,21 @@
+.nested-fields
+  .row
+    .col-sm-5.form-group-sm
+      = f.association :technology,
+        as: :grouped_select,
+        collection: @technology_groups,
+        group_method: :last,
+        value_method: :id,
+        prompt: 'Choose existing technology'
+    .col-sm-5.form-group-sm
+      = f.input :task, collection: enum_map(ToolUse.tasks)
+    .col-sm-5.form-group-sm
+      = f.input :assessment, collection: enum_map(ToolUse.assessments)
+    .col-sm-2.col-sm-offset-5
+      = link_to_remove_association f, class: 'btn btn-warning' do
+        = fa_icon "remove"
+        remove
+  .row
+    .col-sm-12
+      %br
+

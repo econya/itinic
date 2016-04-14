@@ -12,5 +12,14 @@
   %tbody
     = render(partial: 'tr_community_involvement', collection: @community.community_involvements) || content_tag(:tr, content_tag(:td, 'No hackers registered'))
 
+%h2 Associated technologies
+%table.table
+  %thead
+    %tr
+      %td Technology
+      %td used for
+      %td assessment
+  %tbody
+    = render(partial: 'tr_tool_use', collection: @community.tool_uses) || content_tag(:tr, content_tag(:td, 'No tool usages registered'))
 
 = edit_button @community
