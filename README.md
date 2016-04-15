@@ -61,6 +61,8 @@ itinic is build with ruby on rails
       - `git remote add dokku dokku@yourhost:itinic`
       - `git push dokku`
       - `dokku run itinic rake db:migrate db:seed`
+      - `dokku config:set --no-restart itinic DOKKU_LETSENCRYPT_EMAIL=your.mail@your.host`
+      - `dokku letsencrypt itinic`
     * On updates
       - `git push dokku` (yay, isnt dokku cool?)
     * On migrations
