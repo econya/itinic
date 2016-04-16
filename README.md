@@ -1,5 +1,7 @@
 ## IT in Intentional Communities
 
+Running at https://itinic.econya.de .
+
 Living in the ecovillage Sieben Linden in north of Germany, I struggle with my
 tasks as software developer and systems administrator.
 
