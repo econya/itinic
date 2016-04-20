@@ -18,7 +18,7 @@
       %td Community
       %td Role
   %tbody
-    = render(partial: 'tr_community_involvement', collection: @hacker.community_involvements) || content_tag(:tr, content_tag(:td, 'No involvement registered'))
+    = render(partial: 'tr_community_involvement', collection: @hacker.community_involvements) || content_tag(:tr, content_tag(:td, 'No involvement registered'), colspan: 2)
 
 %h2 Experiences
 
