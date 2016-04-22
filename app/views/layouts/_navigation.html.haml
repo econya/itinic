@@ -18,6 +18,14 @@
   - if current_user
     %ul.nav.navbar-nav.navbar-right
       %li
+        = link_to 'https://github.com/econya/itinic' do
+          = fa_icon 'github'
+          Code GitHub
+      %li
+        = link_to 'https://github.com/econya/itinic/issues' do
+          = fa_icon 'github'
+          Feedback GitHub
+      %li
         = link_to 'My Profile', edit_hacker_path(0)
       %li.dropdown
         %a.dropdown-toggle(href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false")
