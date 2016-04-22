@@ -15,6 +15,7 @@ class Technology < ActiveRecord::Base
     application:          4,
     technology:           5,
     os:                   6,
-    hardware:             7
+    hardware:             7,
+    service:              8
   }
 end
