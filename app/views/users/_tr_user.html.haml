@@ -2,6 +2,7 @@
   %td
     = tr_user.email
   %td
-    = tr_user.hacker_name
+    - if tr_user.hacker.present?
+      = link_to tr_user.hacker_name, tr_user.hacker
   %td
     = tr_user.last_sign_in_at
