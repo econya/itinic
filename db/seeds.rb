@@ -42,5 +42,8 @@ Technology.with_options kind: :os do |t|
   t.create!(name: "Mac OS")
   t.create!(name: "Linux/Unix")
 end
+Technology.with_options kind: :service do |t|
+  t.create!(name: "GitHub")
+end
 
 Community.create!(name: "Sieben Linden")
