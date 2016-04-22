@@ -59,6 +59,7 @@ class HackersController < ApplicationController
       :last_name,
       :alias,
       :morale,
+      :show_email,
       :_destroy,
       community_involvements_attributes: [:id, :kind, :community_id, :_destroy],
       experiences_attributes: [:id, :technology_id, :assessment, :level, :_destroy])

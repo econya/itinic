@@ -1,4 +1,5 @@
-= simple_form_for @hacker, html: { class: 'form-horizontal' }, wrapper: :horizontal_form do |f|
+= simple_form_for @hacker, html: { class: 'form-horizontal' }, wrapper: :horizontal_form,
+  wrapper_mappings: {boolean: :horizontal_boolean} do |f|
   = f.error_notification
 
   %fieldset
@@ -14,6 +15,7 @@
     %label.legend Personal
     .form-inputs
       = f.input :morale, collection: enum_map(Hacker.morales), hint: 'How much pain is it for you to use proprietary software?'
+      = f.input :show_email, hint: '(opt-in) Make your email address visible to everybody who registered'
 
   %hr
 
