@@ -57,7 +57,7 @@ class CommunitiesController < ApplicationController
     params.require(:community).permit(
       :name,
       :_destroy,
-      tool_uses_attributes: [:id, :technology_id, :assessment, :task]
+      tool_uses_attributes: [:id, :technology_id, :assessment, :task, :_destroy]
       )
   end
 end
