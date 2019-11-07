@@ -53,7 +53,7 @@ end
 gem 'simple_form', '~> 3.2'
 gem 'bootstrap-sass', '~> 3.3'
 gem 'bh', '~> 1.3'
-gem 'devise', '~> 3.5'
+gem 'devise', '~> 4.7'
 gem 'haml', '~> 4.0'
 gem 'haml-rails', '~> 0.9'
 gem 'friendly_id', '~> 5.1'
